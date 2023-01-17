@@ -1,13 +1,17 @@
 package Model;
 
-import java.util.Scanner;
 import java.util.ArrayList;
 import Entity.peminjam_entity;
+import Interface.peminjamInterface;
 
-public class peminjamModel implements peminjamInterface {
-    ArrayList<peminjam_entity> pmj = new ArrayList<>();
+public class PeminjamModel implements peminjamInterface {
+    public ArrayList<peminjam_entity> pmj = new ArrayList<>();
+    public ArrayList<peminjam_entity> DataPeminjam() {
 
-    public void masuk(peminjam_entity pmjEnt){
+        return pmj;
+    }
+
+    public void masuk(peminjam_entity pmjEnt) {
         // Scanner inout = new Scanner(System.in);
         // System.out.print("Masukkan Nama : ");
         // p.setName(inout.next());
@@ -20,25 +24,26 @@ public class peminjamModel implements peminjamInterface {
         pmj.add(pmjEnt);
     }
 
-    public void tampil(){
+    public void tampil() {
         for (peminjam_entity pj : pmj) {
-            System.out.println("Nama  : "+pj.getName());
-            System.out.println("No Hp : "+pj.getNoHP());
-            System.out.println("Lama Peminjaman : "+ pj.getLamapinjaman()+" hari ");
-            System.out.println("Alamat : "+pj.getAlamat());
+            System.out.println("Nama  : " + pj.getName());
+            System.out.println("No Hp : " + pj.getNoHP());
+            System.out.println("Lama Peminjaman : " + pj.getLamapinjaman() + " hari ");
+            System.out.println("Alamat : " + pj.getAlamat());
+            System.out.println("Buku Yang Dipinjam " + pj.getJudul());
         }
     }
 
-    public void hapusPJ(int Index){
+    public void hapusPJ(int Index) {
         // System.out.println("Masukkan Nama Peminjam : ");
         // String nama = inout.next();
         // for (int i = 0 ; i < pmj.size(); i++ ){
-        //     if(pmj.get(i).getName().equals(nama)){
-        //        pmj.remove(i);
-        //     }
-        //     else{
-        //         System.out.println("Nama Peminjam Tidak Ada");
-        //     }
+        // if(pmj.get(i).getName().equals(nama)){
+        // pmj.remove(i);
+        // }
+        // else{
+        // System.out.println("Nama Peminjam Tidak Ada");
+        // }
         pmj.remove(Index);
     }
 }

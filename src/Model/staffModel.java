@@ -2,6 +2,8 @@ package Model;
 
 
 import Entity.staff_entity;
+import Interface.staffInterface;
+
 import java.util.ArrayList;
 
 public class staffModel implements staffInterface {
@@ -46,6 +48,22 @@ public class staffModel implements staffInterface {
         // System.out.print("Masukkan index : ");
         // int i =  inout.nextInt();
         stf.remove(index);
+    }
+
+    public int cekData(String username, String passwordAdmin) {
+        int loop = 0;
+        for (staff_entity Staff : stf) {
+            if (Staff.getName().equals(username) && Staff.getPassword().equals(passwordAdmin)) {
+                break;
+            } else {
+                loop++;
+            }
+        }
+        return loop;
+    }
+
+    public staff_entity showDataAdmin(int index) {
+        return stf.get(index);
     }
 
     public ArrayList<staff_entity> viewData() {

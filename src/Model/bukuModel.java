@@ -3,10 +3,15 @@ package Model;
 import java.util.ArrayList;
 
 import Entity.buku_entity;
+import Interface.bukuInterface;
 
 public class bukuModel implements bukuInterface {
 
-    static ArrayList<buku_entity> dtBk = new ArrayList<>();
+    public ArrayList<buku_entity> dtBk = new ArrayList<>();
+
+    public ArrayList<buku_entity> alldatabuku() {
+        return dtBk;
+    }
 
     public void inputBuku(buku_entity bukuEnt) {
         // System.out.println("DATA BUKU");
@@ -31,39 +36,40 @@ public class bukuModel implements bukuInterface {
         }
     }
 
-    public void hapusBuku(int index){
+    public void hapusBuku(int index) {
         // System.out.println("Masukkan Judul Buku : ");
         // String judul = inout.next();
         // for(int i = 0;i< dtBk.size();i++){
-        //     if(dtBk.get(i).getJudul().equals(judul)){
-        //         dtBk.remove(i);
-        //     }
-        //     else{
-        //         System.out.println("Buku yang dicari tidak ada");
+        // if(dtBk.get(i).getJudul().equals(judul)){
+        // dtBk.remove(i);
+        // }
+        // else{
+        // System.out.println("Buku yang dicari tidak ada");
         // }
         // }
         dtBk.remove(index);
     }
 
-    public void editBuku(int index, buku_entity bukuEnt){
+    public void editBuku(int index, buku_entity bukuEnt) {
         // Scanner inout = new Scanner(System.in);
         // tampilan();
         // System.out.print("Masukkan Judul Buku : ");
         // String judul = inout.next();
         // if(judul.equals(bk.getJudul())){
-        //     System.out.print("Masukkan Penerbit : ");
-        //     String pnb = inout.next();
-        //     System.out.print("Masukkan Tahun Penerbit : ");
-        //     String thn = inout.next();
-        //     System.out.print("Masukkan Nama Penulis");
-        //     String nm = inout.next();
-        //     for(int i = 0;i< dtBk.size();i++){
-        //         if(dtBk.get(i).getJudul().equals(judul)){
-        //             dtBk.set(i, new dataBuku_entity(bk.getJudul(), bk.getPenerbit(), bk.getTahun(), bk.getPenulis()));
-        //         }
-        //     }
+        // System.out.print("Masukkan Penerbit : ");
+        // String pnb = inout.next();
+        // System.out.print("Masukkan Tahun Penerbit : ");
+        // String thn = inout.next();
+        // System.out.print("Masukkan Nama Penulis");
+        // String nm = inout.next();
+        // for(int i = 0;i< dtBk.size();i++){
+        // if(dtBk.get(i).getJudul().equals(judul)){
+        // dtBk.set(i, new dataBuku_entity(bk.getJudul(), bk.getPenerbit(),
+        // bk.getTahun(), bk.getPenulis()));
+        // }
+        // }
         // }else{
-        //     System.out.println("Buku yang dicari tidak ada");
+        // System.out.println("Buku yang dicari tidak ada");
         dtBk.set(index, bukuEnt);
     }
 }

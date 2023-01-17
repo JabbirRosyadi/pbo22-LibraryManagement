@@ -3,13 +3,19 @@ package Entity;
 public class peminjam_entity extends member_entity {
     private String alamat;
     private int lamapinjaman;
+    private String Judul;
 
-    public peminjam_entity(String name, String noHP, int lamapinjaman, String alamat){
+
+    public peminjam_entity(String name, String noHP, int lamapinjaman, String alamat, String Judul){
         super(name,noHP);
         this.lamapinjaman = lamapinjaman;
         this.alamat = alamat;
-    }
+        this.Judul = Judul;
 
+    }
+    public String getJudul() {
+        return Judul;
+    }
     @Override
     public String getName() {
         // TODO Auto-generated method stub
