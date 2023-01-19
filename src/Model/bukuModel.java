@@ -29,6 +29,7 @@ public class bukuModel implements bukuInterface {
     public void tampilan() {
         for (buku_entity dtBkE : dtBk) {
             System.out.println("DATA BUKU");
+            System.out.println("Index : " + dtBk.indexOf(dtBkE));
             System.out.println("Judul : " + dtBkE.getJudul());
             System.out.println("Penerbit : " + dtBkE.getPenerbit());
             System.out.println("Tahun Terbit : " + dtBkE.getTahun());

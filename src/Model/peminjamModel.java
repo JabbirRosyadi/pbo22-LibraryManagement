@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import Entity.peminjam_entity;
 import Interface.peminjamInterface;
 
-public class PeminjamModel implements peminjamInterface {
+public class peminjamModel implements peminjamInterface {
     public ArrayList<peminjam_entity> pmj = new ArrayList<>();
     public ArrayList<peminjam_entity> DataPeminjam() {
 
@@ -26,6 +26,7 @@ public class PeminjamModel implements peminjamInterface {
 
     public void tampil() {
         for (peminjam_entity pj : pmj) {
+            System.out.println("Index : "+pmj.indexOf(pj));
             System.out.println("Nama  : " + pj.getName());
             System.out.println("No Hp : " + pj.getNoHP());
             System.out.println("Lama Peminjaman : " + pj.getLamapinjaman() + " hari ");

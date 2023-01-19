@@ -50,4 +50,7 @@ public class peminjamController {
         return dataPeminjam;
     }
 
+    public void tampil(){
+        AllObjectModel.peminjamM.tampil();
+    }
 }

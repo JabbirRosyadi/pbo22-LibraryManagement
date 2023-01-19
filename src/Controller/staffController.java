@@ -12,17 +12,17 @@ public class staffController {
             AllObjectModel.staffM.daftar(new staff_entity(UsernameStaff[i], noHp[i], PasswordStaff[i]));
         }
     }
-    // public void daftar(staff_entity stf) {
-    // AllObjectModel.staffM.daftar(stf);
-    // }
+     public void daftar(staff_entity stf) {
+     AllObjectModel.staffM.daftar(stf);
+     }
 
-    // public void hapus(int Index) {
-    // AllObjectModel.staffM.hapus(Index);
-    // }
+     public void hapus(int Index) {
+     AllObjectModel.staffM.hapus(Index);
+     }
 
-    // public void ganti(int Index, staff_entity stf) {
-    // AllObjectModel.staffM.ganti(Index, stf);
-    // }
+     public void ganti(int Index, staff_entity stf) {
+     AllObjectModel.staffM.ganti(Index, stf);
+     }
 
     public boolean cekLogin(String nama, String password) {
         boolean test = false;
